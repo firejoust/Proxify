@@ -1,0 +1,13 @@
+name: proxify
+version: 1.0.0
+
+authors:
+  - firejoust <42525540+firejoust@users.noreply.github.com>
+
+targets:
+  proxify:
+    main: src/proxify.cr
+
+crystal: 1.6.2
+
+license: MIT
