@@ -17,7 +17,9 @@ def client_inbound(client, remote)
         remote << message.not_nil! 
     end
 rescue exception
-    puts "[#{client.remote_address}] #{exception}"
+    puts "[#{client.remote_address}] remotebound - #{exception}"
+    client.close
+    remote.close
 end
 
 def remote_inbound(client, remote)
@@ -25,7 +27,9 @@ def remote_inbound(client, remote)
         client << reply.not_nil!
     end
 rescue exception
-    puts "[#{client.remote_address}] #{exception}"
+    puts "[#{remote.remote_address}] clientbound - #{exception}"
+    client.close
+    remote.close
 end
 
 usage = nil
