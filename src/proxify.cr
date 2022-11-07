@@ -17,7 +17,7 @@ def client_inbound(client, remote)
         remote << message.not_nil! 
     end
 rescue exception
-    puts "[#{client.remote_address}] remotebound - #{exception}"
+    puts "[serverbound] #{exception}"
     client.close
     remote.close
 end
@@ -27,7 +27,7 @@ def remote_inbound(client, remote)
         client << reply.not_nil!
     end
 rescue exception
-    puts "[#{remote.remote_address}] clientbound - #{exception}"
+    puts "[clientbound] #{exception}"
     client.close
     remote.close
 end
