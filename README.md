@@ -1,10 +1,10 @@
 <div align="center">
     <h2>Proxify</h2>
-    <p align="center">A TCP tunneler</p>
+    <p align="center">A TCP tunneler that redirects incoming/outgoing traffic</p>
 </div>
 
 ### Features
-- Proxy TCP packets from point A to point B
+- Redirects TCP packets from point A to point B
 - Plug & play
 - DNS Support
 
